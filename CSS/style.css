@@ -1,0 +1,103 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+a{
+    text-decoration: none;
+}
+
+ul{
+    list-style: none;
+}
+
+body{
+    font-family: var(--FirstFont);
+}
+
+.align-center{
+    align-items: center;
+}
+
+.container{
+    width: 1170px;
+    margin: auto;
+}
+
+.row{
+    display: flex;
+    flex-wrap: wrap;
+    
+}
+
+
+
+
+.Popular_card{
+    
+    width: calc(25% - 10px);
+    background-color: #eeeeee;
+    box-shadow: 2px 3px 5px gray;
+    position: relative;
+    text-align: center;
+    padding: 75px 0;
+    
+}
+
+
+.Popular_card .text h3{
+    color: #222222;
+    font-size: 20px;
+    font-family: var(--FirstFont);
+    font-weight: 500;
+}
+
+.Popular_card .text p{
+    font-size: 14px;
+    color: #444444;
+    font-family: var(--secondFont);
+    font-weight: 400;
+
+}
+
+.Popular_card .overlay{
+    position: absolute;
+    inset: 0;
+    text-align: center;
+    transform: scale(0);
+    transition: 0.35s;
+    background-color: #10bcf1;
+    color: #222222;
+    padding: 75px 0;
+
+}
+.Popular_card .overlay a{
+   
+    display: inline-block;
+    background-color: #faf7f7;
+    text-align: center;
+    color: #10bcf1;
+    position: absolute;
+    transform: translateX(-50%);
+    opacity: 0;
+    transition: 0.6s;
+    
+}
+
+.Popular_card .overlay h3{
+    font-size: 20px;
+    font-weight: 500;
+    font-family:var(--FirstFont);
+    padding-top: 15px;
+}
+
+
+.Popular_card:hover .overlay{
+    transform: scale(1);
+}
+
+.Popular_card:hover .overlay a{
+    left: 50%;
+    opacity: 1;
+}
